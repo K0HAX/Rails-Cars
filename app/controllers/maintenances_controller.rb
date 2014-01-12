@@ -5,7 +5,8 @@ class MaintenancesController < ApplicationController
   # GET /maintenances
   # GET /maintenances.json
   def index
-    @maintenances = Maintenance.all
+    @car = Car.find(params[:car_id])
+    @maintenances = @car.maintenances.all
 
     respond_to do |format|
        format.html # index.erb.html
