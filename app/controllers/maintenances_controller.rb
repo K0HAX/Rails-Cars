@@ -6,11 +6,18 @@ class MaintenancesController < ApplicationController
   # GET /maintenances.json
   def index
     @maintenances = Maintenance.all
+
+    respond_to do |format|
+       format.html # index.erb.html
+    end
   end
 
   # GET /maintenances/1
   # GET /maintenances/1.json
   def show
+     respond_to do |format|
+       format.html # show.erb.html
+     end
   end
 
   # GET /maintenances/new

@@ -6,11 +6,20 @@ class CarsController < ApplicationController
   # GET /cars.json
   def index
     @cars = Car.all
+
+    respond_to do |format|
+	format.html
+	format.json { render json: @cars.to_json(:include => :maintenances) }
+    end
   end
 
   # GET /cars/1
   # GET /cars/1.json
   def show
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @car.to_json(:include => :maintenances) }
+    end
   end
 
   # GET /cars/new
