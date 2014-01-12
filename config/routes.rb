@@ -1,4 +1,7 @@
 CarApp::Application.routes.draw do
+  devise_for :admins
+  root :to => "cars#index"
+
   resources :cars do
      resources :maintenances
   end

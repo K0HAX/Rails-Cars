@@ -2,12 +2,19 @@
 <html>
 <head>
   <title>CarApp</title>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if admin_signed_in? %>
+<div class="admin_links">
+ <%= current_admin.email %>
+ <%= link_to "Log out", destroy_admin_session_path, :method => :delete %>
+</div>
+<% end %>
 <%= yield %>
 
 </body>
