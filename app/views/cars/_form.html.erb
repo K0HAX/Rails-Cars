@@ -1,0 +1,32 @@
+<%= form_for @car, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :Make, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Make, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Model, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Model, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Cost, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Cost, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Description, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                cars_path, :class => 'btn' %>
+  </div>
+<% end %>
