@@ -10,7 +10,8 @@
       <th><%= model_class.human_attribute_name(:Model) %></th>
       <th><%= model_class.human_attribute_name(:Cost) %></th>
       <th><%= model_class.human_attribute_name(:Description) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:year) %></th>
+      <th><%= model_class.human_attribute_name(:in_inventory) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -22,7 +23,8 @@
         <td><%= car.Model %></td>
         <td><%= car.Cost %></td>
         <td><%= car.Description %></td>
-        <td><%=l car.created_at %></td>
+        <td><%= car.year %></td>
+        <td><%= car.in_inventory %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_car_path(car), :class => 'btn btn-mini' %>

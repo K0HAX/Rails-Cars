@@ -23,6 +23,18 @@
       <%= f.text_field :Description, :class => 'text_field' %>
     </div>
   </div>
+  <div class="control-group">
+    <%= f.label :year, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :year, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :in_inventory, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :in_inventory, :class => 'checkbox' %>
+    </div>
+  </div>
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
