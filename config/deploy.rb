@@ -40,16 +40,21 @@ namespace :deploy do
     end
   end
 
-  task :symlink_db, :roles => :app do
-    run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml" # This file is not included repository, so we will create a symlink 
+  task :symlink_db do
+    on roles(:app) do
+       execute "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml" # This file is not included repository, so we will create a symlink 
+    end
   end
-  task :symlink_secret_token, :roles => :app do
-    run "ln -nfs #{deploy_to}/shared/config/initializers/secret_token.rb #{release_path}/config/initializers/secret_token.rb" # This file is not included repository, so we will create a symlink 
+  task :symlink_secret_token do
+    on roles(:app) do
+        execute "ln -nfs #{deploy_to}/shared/config/initializers/secret_token.rb #{release_path}/config/initializers/secret_token.rb" # This file is not included repository, so we will create a symlink 
+    end
   end
 
   #after 'deploy:update_code', 'deploy:migrate'
-  after 'deploy:update_code', 'deploy:symlynk_db'
-  after 'deploy:update_code', 'deploy:symlink_secret_token'
+  before 'deploy:assets:precompile', 'deploy:symlink_db' # callback: run this task before deploy:assets:precompile
+  before 'deploy:assets:precompile', 'deploy:symlink_secret_token' # # callback: run this task before deploy:assets:precompile
+
 
   after :finishing, 'deploy:cleanup'
 
