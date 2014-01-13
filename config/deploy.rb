@@ -46,5 +46,16 @@ namespace :deploy do
 
 end
 
+namespace :assets do
+
+  desc 'Precompile assets'
+  task :precompile do
+    on roles(:web), in: :sequence do
+      execute %Q{cd #{deploy_to}/current && #{rake} RAILS_ENV=#{Rubber.env} #{asset_env} assets:precompile:primary}
+    end
+  end
+
+end
+
 set :keep_releases, 5
 after "deploy:restart", "deploy:cleanup" 
