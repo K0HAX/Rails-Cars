@@ -40,7 +40,16 @@ namespace :deploy do
     end
   end
 
+  task :symlink_db, :roles => :app do
+    run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml" # This file is not included repository, so we will create a symlink 
+  end
+  task :symlink_secret_token, :roles => :app do
+    run "ln -nfs #{deploy_to}/shared/config/initializers/secret_token.rb #{release_path}/config/initializers/secret_token.rb" # This file is not included repository, so we will create a symlink 
+  end
+
   #after 'deploy:update_code', 'deploy:migrate'
+  after 'deploy:update_code', 'deploy:symlynk_db'
+  after 'deploy:update_code', 'deploy:symlink_secret_token'
 
   after :finishing, 'deploy:cleanup'
 
