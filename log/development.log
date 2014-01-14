@@ -4621,3 +4621,1160 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 13:21:44
 
 
 Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-13 13:21:44 -0600
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/michael/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-14 08:55:01 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CarsController#index as HTML
+Completed 401 Unauthorized in 37ms
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2014-01-14 08:55:01 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.2ms)
+Completed 200 OK in 972ms (Views: 947.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:02 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:02 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:02 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/maintenances.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:03 -0600
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DKzHzjC+Db8CZQbOHhg86H4DENEydwFOEH816/SIBhk=", "admin"=>{"email"=>"michael@englehorn.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'michael@englehorn.com' ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (86.2ms)[0m  UPDATE "admins" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = 1  [["last_sign_in_at", Mon, 13 Jan 2014 19:21:25 UTC +00:00], ["current_sign_in_at", Tue, 14 Jan 2014 14:55:10 UTC +00:00], ["sign_in_count", 7], ["updated_at", Tue, 14 Jan 2014 14:55:10 UTC +00:00]]
+  [1m[36m (22.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 338ms (ActiveRecord: 109.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+Processing by CarsController#index as HTML
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 75ms (Views: 51.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/maintenances.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:10 -0600
+
+
+Started GET "/cars/2" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered cars/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:14 -0600
+
+
+Started GET "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+Processing by MaintenancesController#index as HTML
+  Parameters: {"car_id"=>"2"}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCar Load (0.1ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "2"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/michael/dev/Rails-Cars/app/controllers/maintenances_controller.rb:9)
+  [1m[35mMaintenance Load (0.3ms)[0m  SELECT "maintenances".* FROM "maintenances" WHERE "maintenances"."car_id" = ?  [["car_id", 2]]
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered maintenances/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 110ms (Views: 50.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:15 -0600
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/michael/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MaintenancesController#index as HTML
+  Parameters: {"car_id"=>"2"}
+Completed 401 Unauthorized in 11ms
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 263ms (Views: 222.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/maintenances.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:56 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:55:57 -0600
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2014-01-14 08:56:01 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fO9vEJTLdlBbp/udgB9+4nhOOEJzcr3HL3afsDfwIww=", "admin"=>{"email"=>"michael@englehorn.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mAdmin Load (0.5ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'michael@englehorn.com' ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.2ms)[0m  UPDATE "admins" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = 1  [["last_sign_in_at", Tue, 14 Jan 2014 14:55:10 UTC +00:00], ["current_sign_in_at", Tue, 14 Jan 2014 14:56:01 UTC +00:00], ["sign_in_count", 8], ["updated_at", Tue, 14 Jan 2014 14:56:01 UTC +00:00]]
+  [1m[36m (24.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cars/2/maintenances
+Completed 302 Found in 160ms (ActiveRecord: 30.8ms)
+
+
+Started GET "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 08:56:01 -0600
+Processing by MaintenancesController#index as HTML
+  Parameters: {"car_id"=>"2"}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "2"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/michael/dev/Rails-Cars/app/controllers/maintenances_controller.rb:9)
+  [1m[35mMaintenance Load (0.2ms)[0m  SELECT "maintenances".* FROM "maintenances" WHERE "maintenances"."car_id" = ?  [["car_id", 2]]
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered maintenances/index.html.erb within layouts/application (35.3ms)
+Completed 500 Internal Server Error in 99ms
+
+ActionView::Template::Error (undefined method `to_i' for #<Maintenance:0x007fa2c0b5f828>):
+    34:     <% end %>
+    35:   </tbody>
+    36: </table>
+    37: Total lifetime maintenance cost: <%= @maintenances.sum(:cost).to_i %>
+    38: 
+    39: <%= link_to t('.new', :default => t("helpers.links.new")),
+    40:             new_car_maintenance_path,
+  app/views/maintenances/index.html.erb:37:in `_app_views_maintenances_index_html_erb__3828054362150887801_70168496909000'
+  app/controllers/maintenances_controller.rb:11:in `index'
+
+
+  Rendered /home/michael/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/michael/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /home/michael/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (41.3ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/michael/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 08:59:03 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MaintenancesController#index as HTML
+  Parameters: {"car_id"=>"2"}
+Completed 401 Unauthorized in 5ms
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2014-01-14 08:59:03 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 302ms (Views: 271.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/maintenances.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:04 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:05 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:05 -0600
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U5dC6c47oxNzm/cVwFE8JzR/eKF9ZlQAHTn6IbxGPqc=", "admin"=>{"email"=>"michael@englehorn.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'michael@englehorn.com' ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  UPDATE "admins" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = 1  [["last_sign_in_at", Tue, 14 Jan 2014 14:56:01 UTC +00:00], ["current_sign_in_at", Tue, 14 Jan 2014 14:59:10 UTC +00:00], ["sign_in_count", 9], ["updated_at", Tue, 14 Jan 2014 14:59:10 UTC +00:00]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cars/2/maintenances
+Completed 302 Found in 160ms (ActiveRecord: 22.5ms)
+
+
+Started GET "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+Processing by MaintenancesController#index as HTML
+  Parameters: {"car_id"=>"2"}
+  [1m[35mAdmin Load (1.1ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "2"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/michael/dev/Rails-Cars/app/controllers/maintenances_controller.rb:9)
+  [1m[35mMaintenance Load (0.3ms)[0m  SELECT "maintenances".* FROM "maintenances" WHERE "maintenances"."car_id" = ?  [["car_id", 2]]
+  [1m[36mCar Load (0.7ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered maintenances/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 98ms (Views: 43.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/maintenances.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:10 -0600
+
+
+Started GET "/cars/2/maintenances/new" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+Processing by MaintenancesController#new as HTML
+  Parameters: {"car_id"=>"2"}
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCar Load (0.1ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCar Load (0.2ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered maintenances/_form.html.erb (15.3ms)
+  Rendered maintenances/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 183ms (Views: 178.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:14 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:15 -0600
+
+
+Started POST "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 08:59:31 -0600
+Processing by MaintenancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HWqT946QlAqzO0GK35nmzd/+ssIGom16as82kAgZTs8=", "maintenance"=>{"title"=>"Test", "date"=>"2013-01-14", "description"=>"Filled with gas?", "cost"=>"28"}, "commit"=>"Create Maintenance", "car_id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCar Load (0.2ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (52.7ms)[0m  INSERT INTO "maintenances" ("car_id", "cost", "created_at", "date", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["car_id", 2], ["cost", #<BigDecimal:463fb88,'0.28E2',9(18)>], ["created_at", Tue, 14 Jan 2014 14:59:31 UTC +00:00], ["date", Mon, 14 Jan 2013], ["description", "Filled with gas?"], ["title", "Test"], ["updated_at", Tue, 14 Jan 2014 14:59:31 UTC +00:00]]
+  [1m[36m (30.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mCar Load (0.3ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://127.0.0.1:3000/cars/2/maintenances/3
+Completed 302 Found in 101ms (ActiveRecord: 83.9ms)
+
+
+Started GET "/cars/2/maintenances/3" for 127.0.0.1 at 2014-01-14 08:59:31 -0600
+Processing by MaintenancesController#show as HTML
+  Parameters: {"car_id"=>"2", "id"=>"3"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCar Load (0.1ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mMaintenance Load (0.2ms)[0m  [1mSELECT "maintenances".* FROM "maintenances" WHERE "maintenances"."car_id" = ? AND "maintenances"."id" = ? LIMIT 1[0m  [["car_id", 2], ["id", "3"]]
+  [1m[35mCar Load (0.2ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered maintenances/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 67ms (Views: 62.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/maintenances.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:32 -0600
+
+
+Started GET "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+Processing by MaintenancesController#index as HTML
+  Parameters: {"car_id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35mCar Load (0.3ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "2"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/michael/dev/Rails-Cars/app/controllers/maintenances_controller.rb:9)
+  [1m[36mMaintenance Load (0.2ms)[0m  [1mSELECT "maintenances".* FROM "maintenances" WHERE "maintenances"."car_id" = ?[0m  [["car_id", 2]]
+  [1m[35mCar Load (0.1ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered maintenances/index.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 74ms (Views: 65.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:59:34 -0600
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/michael/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 09:00:20 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MaintenancesController#index as HTML
+  Parameters: {"car_id"=>"2"}
+Completed 401 Unauthorized in 5ms
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 285ms (Views: 244.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/maintenances.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:21 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:22 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:22 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:22 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:22 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:22 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:22 -0600
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bu6rhAbiUHlaH2hs+d1QtKugI4VVgzDt0KHtGcN0MS8=", "admin"=>{"email"=>"michael@englehorn.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mAdmin Load (1.7ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'michael@englehorn.com' ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.1ms)[0m  UPDATE "admins" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = 1  [["last_sign_in_at", Tue, 14 Jan 2014 14:59:10 UTC +00:00], ["current_sign_in_at", Tue, 14 Jan 2014 15:00:27 UTC +00:00], ["sign_in_count", 10], ["updated_at", Tue, 14 Jan 2014 15:00:27 UTC +00:00]]
+  [1m[36m (15.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cars/2/maintenances
+Completed 302 Found in 159ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/cars/2/maintenances" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+Processing by MaintenancesController#index as HTML
+  Parameters: {"car_id"=>"2"}
+  [1m[35mAdmin Load (1.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "2"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/michael/dev/Rails-Cars/app/controllers/maintenances_controller.rb:9)
+  [1m[35mMaintenance Load (0.3ms)[0m  SELECT "maintenances".* FROM "maintenances" WHERE "maintenances"."car_id" = ?  [["car_id", 2]]
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? ORDER BY "cars"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered maintenances/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 96ms (Views: 38.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/maintenances.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:27 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:28 -0600
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:28 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:28 -0600
+
+
+Started GET "/assets/maintenances.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:28 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 09:00:28 -0600
