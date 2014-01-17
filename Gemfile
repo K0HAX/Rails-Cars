@@ -11,6 +11,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+gem 'highline'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
