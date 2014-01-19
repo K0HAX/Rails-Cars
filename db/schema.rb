@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140119004558) do
+ActiveRecord::Schema.define(version: 20140119011623) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140119004558) do
   create_table "cars", force: true do |t|
     t.string   "Make"
     t.string   "Model"
-    t.decimal  "Cost"
+    t.decimal  "Cost",         precision: 16, scale: 2
     t.text     "Description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -46,16 +46,16 @@ ActiveRecord::Schema.define(version: 20140119004558) do
     t.string   "title"
     t.date     "date"
     t.text     "description"
-    t.decimal  "cost"
+    t.decimal  "cost",        precision: 16, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "car_id"
   end
 
   create_table "refuels", force: true do |t|
-    t.decimal  "miles"
-    t.decimal  "gallons"
-    t.decimal  "price"
+    t.decimal  "miles",      precision: 16, scale: 2
+    t.decimal  "gallons",    precision: 16, scale: 2
+    t.decimal  "price",      precision: 16, scale: 2
     t.integer  "car_id"
     t.datetime "created_at"
     t.datetime "updated_at"
