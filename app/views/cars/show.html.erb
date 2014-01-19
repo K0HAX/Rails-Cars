@@ -23,6 +23,8 @@
               cars_path, :class => 'btn'  %>
   <%= link_to t('.maintenance', :default => t("helpers.links.maintenances")),
               car_maintenances_path(@car), :class => 'btn' %>
+  <%= link_to t('.refuel', :default => t("helpers.links.refuels")),
+              car_refuels_path(@car), :class => 'btn' %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_car_path(@car), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

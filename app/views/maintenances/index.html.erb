@@ -41,3 +41,5 @@ Total lifetime maintenance cost: <%= @maintenances.sum(&:cost) %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_car_maintenance_path,
             :class => 'btn btn-primary' %>
+<%= link_to t('.cars', :default => t("helpers.links.cars")),
+              cars_path, :class => 'btn'  %>

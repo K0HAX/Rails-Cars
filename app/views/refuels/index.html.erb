@@ -9,8 +9,9 @@
       <th><%= model_class.human_attribute_name(:miles) %></th>
       <th><%= model_class.human_attribute_name(:gallons) %></th>
       <th><%= model_class.human_attribute_name(:price) %></th>
-      <th><%= model_class.human_attribute_name(:car_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>Milage (miles/gallons)</th>
+      <th>Fuel cost (Price/Gallons)</th>
+      <th>Milage Cost (price/mile)</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -21,8 +22,9 @@
         <td><%= refuel.miles %></td>
         <td><%= refuel.gallons %></td>
         <td><%= refuel.price %></td>
-        <td><%= refuel.car_id %></td>
-        <td><%=l refuel.created_at %></td>
+	<td><%= refuel.miles / refuel.gallons %></td>
+        <td><%= refuel.price / refuel.gallons %></td>
+        <td><%= refuel.price / refuel.miles %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_car_refuel_path(refuel.car, refuel), :class => 'btn btn-mini' %>
@@ -40,3 +42,5 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_car_refuel_path,
             :class => 'btn btn-primary' %>
+<%= link_to t('.cars', :default => t("helpers.links.cars")),
+              cars_path, :class => 'btn'  %>
