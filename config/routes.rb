@@ -4,6 +4,7 @@ CarApp::Application.routes.draw do
 
   resources :cars do
      resources :maintenances
+     resources :refuels
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

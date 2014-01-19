@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113181318) do
+ActiveRecord::Schema.define(version: 20140119004558) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -51,5 +51,16 @@ ActiveRecord::Schema.define(version: 20140113181318) do
     t.datetime "updated_at"
     t.integer  "car_id"
   end
+
+  create_table "refuels", force: true do |t|
+    t.decimal  "miles"
+    t.decimal  "gallons"
+    t.decimal  "price"
+    t.integer  "car_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refuels", ["car_id"], name: "index_refuels_on_car_id"
 
 end

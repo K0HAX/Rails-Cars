@@ -1,0 +1,42 @@
+<%- model_class = Refuel -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:miles) %></th>
+      <th><%= model_class.human_attribute_name(:gallons) %></th>
+      <th><%= model_class.human_attribute_name(:price) %></th>
+      <th><%= model_class.human_attribute_name(:car_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @refuels.each do |refuel| %>
+      <tr>
+        <td><%= link_to refuel.id, [refuel.car, refuel] %></td>
+        <td><%= refuel.miles %></td>
+        <td><%= refuel.gallons %></td>
+        <td><%= refuel.price %></td>
+        <td><%= refuel.car_id %></td>
+        <td><%=l refuel.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_car_refuel_path(refuel.car, refuel), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      [refuel.car, refuel],
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_car_refuel_path,
+            :class => 'btn btn-primary' %>
