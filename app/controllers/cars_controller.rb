@@ -9,7 +9,7 @@ class CarsController < ApplicationController
 
     respond_to do |format|
 	format.html
-	format.json { render json: @cars.to_json(:include => :maintenances, :include => :refuels) }
+	format.json { render json: @cars.to_json(:include => [:maintenances, :refuels]) }
     end
   end
 
@@ -18,7 +18,7 @@ class CarsController < ApplicationController
   def show
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @car.to_json(:include => :maintenances, :include => :refuels) }
+      format.json { render json: @car.to_json(:include => [:maintenances, :refuels]) }
     end
   end
 
