@@ -22,9 +22,9 @@
         <td><%= refuel.miles %></td>
         <td><%= refuel.gallons %></td>
         <td><%= refuel.price %></td>
-	<td><%= refuel.miles / refuel.gallons %></td>
-        <td><%= refuel.price / refuel.gallons %></td>
-        <td><%= refuel.price / refuel.miles %></td>
+	<td><%= (refuel.miles / refuel.gallons).round(2) %></td>
+        <td><%= (refuel.price / refuel.gallons).round(2) %></td>
+        <td><%= (refuel.price / refuel.miles).round(2) %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_car_refuel_path(refuel.car, refuel), :class => 'btn btn-mini' %>
