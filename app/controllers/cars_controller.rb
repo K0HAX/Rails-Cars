@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  before_filter :authenticate_admin!
+  before_filter :authenticate_user!
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   # GET /cars

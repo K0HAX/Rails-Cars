@@ -1,5 +1,5 @@
 class MaintenancesController < ApplicationController
-  before_filter :authenticate_admin!
+  before_filter :authenticate_user!
   before_action :set_maintenance, only: [:show, :edit, :update, :destroy]
 
   # GET /maintenances
