@@ -6,7 +6,7 @@ class MaintenancesController < ApplicationController
   # GET /maintenances
   # GET /maintenances.json
   def index
-    @car = Car.find(params[:car_id])
+    @car = current_user.cars.find(params[:car_id])
     @maintenances = @car.maintenances.all
 
     respond_to do |format|
@@ -24,7 +24,7 @@ class MaintenancesController < ApplicationController
 
   # GET /maintenances/new
   def new
-    @car = Car.find(params[:car_id])
+    @car = current_user.cars.find(params[:car_id])
     @maintenance = @car.maintenances.new
   end
 
@@ -35,7 +35,7 @@ class MaintenancesController < ApplicationController
   # POST /maintenances
   # POST /maintenances.json
   def create
-    @car = Car.find(params[:car_id])
+    @car = current_user.cars.find(params[:car_id])
     @maintenance = @car.maintenances.new(maintenance_params)
     @maintenance.user_id = current_user.id
 
@@ -77,7 +77,7 @@ class MaintenancesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_maintenance
-      @car = Car.find(params[:car_id])
+      @car = current_user.cars.find(params[:car_id])
       @maintenance = @car.maintenances.find(params[:id])
     end
 
