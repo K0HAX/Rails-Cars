@@ -1,11 +1,12 @@
 class CarsController < ApplicationController
-  before_filter :authenticate_admin!
+  before_filter :authenticate_user!
   before_action :set_car, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /cars
   # GET /cars.json
   def index
-    @cars = Car.all
+    @cars = Car.accessible_by(current_ability)
 
     respond_to do |format|
 	format.html
@@ -35,6 +36,9 @@ class CarsController < ApplicationController
   # POST /cars.json
   def create
     @car = Car.new(car_params)
+    # @car = Users::Car.new(params[:car_params])
+    @car.user_id = current_user.id
+    #current_user.cars << @car
 
     respond_to do |format|
       if @car.save
@@ -79,6 +83,6 @@ class CarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:Make, :Model, :Cost, :Description, :year, :in_inventory)
+      params.require(:car).permit(:Make, :Model, :Cost, :Description, :year, :in_inventory, :user_id)
     end
 end

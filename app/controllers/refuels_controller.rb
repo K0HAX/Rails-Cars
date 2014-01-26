@@ -1,11 +1,12 @@
 class RefuelsController < ApplicationController
-  before_filter :authenticate_admin!
+  before_filter :authenticate_user!
   before_action :set_refuel, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /refuels
   # GET /refuels.json
   def index
-    @car = Car.find(params[:car_id])
+    @car = Car.accessible_by(current_ability).find(params[:car_id])
     @refuels = @car.refuels.all
   end
 
@@ -19,7 +20,7 @@ class RefuelsController < ApplicationController
 
   # GET /refuels/new
   def new
-    @car = Car.find(params[:car_id])
+    @car = Car.accessible_by(current_ability).find(params[:car_id])
     @refuel = @car.refuels.new
   end
 
@@ -30,8 +31,9 @@ class RefuelsController < ApplicationController
   # POST /refuels
   # POST /refuels.json
   def create
-    @car = Car.find(params[:car_id])
+    @car = Cars.accessible_by(current_ability).find(params[:car_id])
     @refuel = @car.refuels.new(refuel_params)
+    @refuel.user_id = current_user.id
 
     respond_to do |format|
       if @refuel.save
@@ -71,12 +73,12 @@ class RefuelsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_refuel
-      @car = Car.find(params[:car_id])
+      @car = Car.accessible_by(current_ability).find(params[:car_id])
       @refuel = @car.refuels.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def refuel_params
-      params.require(:refuel).permit(:miles, :gallons, :price, :car_id)
+      params.require(:refuel).permit(:miles, :gallons, :price, :car_id, :user_id)
     end
 end

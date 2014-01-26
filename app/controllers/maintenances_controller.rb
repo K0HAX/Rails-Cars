@@ -1,11 +1,12 @@
 class MaintenancesController < ApplicationController
-  before_filter :authenticate_admin!
+  before_filter :authenticate_user!
   before_action :set_maintenance, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /maintenances
   # GET /maintenances.json
   def index
-    @car = Car.find(params[:car_id])
+    @car = Car.accessible_by(current_ability).find(params[:car_id])
     @maintenances = @car.maintenances.all
 
     respond_to do |format|
@@ -23,7 +24,7 @@ class MaintenancesController < ApplicationController
 
   # GET /maintenances/new
   def new
-    @car = Car.find(params[:car_id])
+    @car = Car.accessible_by(current_ability).find(params[:car_id])
     @maintenance = @car.maintenances.new
   end
 
@@ -34,8 +35,9 @@ class MaintenancesController < ApplicationController
   # POST /maintenances
   # POST /maintenances.json
   def create
-    @car = Car.find(params[:car_id])
+    @car = Car.accessible_by(current_ability).find(params[:car_id])
     @maintenance = @car.maintenances.new(maintenance_params)
+    @maintenance.user_id = current_user.id
 
     respond_to do |format|
       if @maintenance.save
@@ -75,12 +77,12 @@ class MaintenancesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_maintenance
-      @car = Car.find(params[:car_id])
+      @car = Car.accessible_by(current_ability).find(params[:car_id])
       @maintenance = @car.maintenances.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def maintenance_params
-      params.require(:maintenance).permit(:title, :date, :description, :cost)
+      params.require(:maintenance).permit(:title, :date, :description, :cost, :user_id)
     end
 end
