@@ -6,7 +6,7 @@ class RefuelsController < ApplicationController
   # GET /refuels
   # GET /refuels.json
   def index
-    @car = current_user.cars.find(params[:car_id])
+    @car = Car.accessible_by(current_ability).find(params[:car_id])
     @refuels = @car.refuels.all
   end
 
@@ -20,7 +20,7 @@ class RefuelsController < ApplicationController
 
   # GET /refuels/new
   def new
-    @car = current_user.cars.find(params[:car_id])
+    @car = Car.accessible_by(current_ability).find(params[:car_id])
     @refuel = @car.refuels.new
   end
 
@@ -31,7 +31,7 @@ class RefuelsController < ApplicationController
   # POST /refuels
   # POST /refuels.json
   def create
-    @car = current_user.cars.find(params[:car_id])
+    @car = Cars.accessible_by(current_ability).find(params[:car_id])
     @refuel = @car.refuels.new(refuel_params)
     @refuel.user_id = current_user.id
 
@@ -73,7 +73,7 @@ class RefuelsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_refuel
-      @car = current_user.cars.find(params[:car_id])
+      @car = Car.accessible_by(current_ability).find(params[:car_id])
       @refuel = @car.refuels.find(params[:id])
     end
 
