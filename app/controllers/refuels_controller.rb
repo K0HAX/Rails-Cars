@@ -1,6 +1,7 @@
 class RefuelsController < ApplicationController
   before_filter :authenticate_user!
   before_action :set_refuel, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /refuels
   # GET /refuels.json
@@ -32,6 +33,7 @@ class RefuelsController < ApplicationController
   def create
     @car = Car.find(params[:car_id])
     @refuel = @car.refuels.new(refuel_params)
+    @refuel.user_id = current_user.id
 
     respond_to do |format|
       if @refuel.save
@@ -77,6 +79,6 @@ class RefuelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def refuel_params
-      params.require(:refuel).permit(:miles, :gallons, :price, :car_id)
+      params.require(:refuel).permit(:miles, :gallons, :price, :car_id, :user_id)
     end
 end
