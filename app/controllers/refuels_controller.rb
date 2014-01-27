@@ -31,7 +31,7 @@ class RefuelsController < ApplicationController
   # POST /refuels
   # POST /refuels.json
   def create
-    @car = Cars.accessible_by(current_ability).find(params[:car_id])
+    @car = Car.accessible_by(current_ability).find(params[:car_id])
     @refuel = @car.refuels.new(refuel_params)
     @refuel.user_id = current_user.id
 
