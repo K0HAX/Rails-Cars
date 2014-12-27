@@ -10,6 +10,12 @@
   <dd><%= @refuel.gallons %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @refuel.price %></dd>
+  <dt><strong>Miles per Gallon</strong></dt>
+  <dd><%= (@refuel.miles / @refuel.gallons).round(2) %></dd>
+  <dt><strong>Dollars per Gallon</strong></dt>
+  <dd><%= (@refuel.price / @refuel.gallons).round(2) %></dd>
+  <dt><strong>Dollars per Mile</strong></dt>
+  <dd><%= (@refuel.price / @refuel.miles).round(2) %></dd>
 </dl>
 
 <div class="form-actions">
