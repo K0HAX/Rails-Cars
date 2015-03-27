@@ -53,5 +53,11 @@ gem 'rvm-capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
 
+# Chartkick for graphs
+gem 'chartkick'
+gem 'groupdate'
+gem 'active_median'
+
+gem 'therubyracer'
 # Use debugger
 # gem 'debugger', group: [:development, :test]

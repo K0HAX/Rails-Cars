@@ -1,0 +1,24 @@
+<%- model_class = Refuel -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<div class="page-body">
+    <h3>Miles traveled per Tank</h3>
+    <%= line_chart @refuels.pluck(:id, :miles), discrete: true %>
+    <h3>Gallons per Tank</h3>
+    <%= line_chart @refuels.pluck(:id, :gallons), discrete: true %>
+    <h3>Price per Tank</h3>
+    <%= line_chart @refuels.pluck(:id, :price), discrete: true %>
+    <h3>Miles per Gallon</h3>
+    <%= line_chart @mileageArray, discrete: true %>
+    <h3>Price per Gallon</h3>
+    <%= line_chart @fuelCostArray, discrete: true %>
+    <h3>Price per Mile</h3>
+    <%= line_chart @mileageCostArray, discrete:true %>
+</div>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_car_refuel_path,
+            :class => 'btn btn-primary' %>
+<%= link_to t('.cars', :default => t("helpers.links.cars")),
+              cars_path, :class => 'btn'  %>

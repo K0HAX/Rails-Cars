@@ -10,6 +10,26 @@ class RefuelsController < ApplicationController
     @refuels = @car.refuels.all
   end
 
+  def graphs
+      @car = Car.accessible_by(current_ability).find(params[:car_id])
+      @refuels = @car.refuels
+      @mileageArray = Array.new
+      @fuelCostArray = Array.new
+      @mileageCostArray = Array.new
+      @refuels.each do |refuel|
+          @tmpMilage = (refuel.miles / refuel.gallons).round(2)
+          @tmpFuelCost = (refuel.price / refuel.gallons).round(2)
+          @tmpMileageCost = (refuel.price / refuel.miles).round(2)
+          @tmpId = (refuel.id)
+          ary = [@tmpId, @tmpMilage]
+          ary2 = [@tmpId, @tmpFuelCost]
+          ary3 = [@tmpId, @tmpMileageCost]
+          @mileageArray.push(ary)
+          @fuelCostArray.push(ary2)
+          @mileageCostArray.push(ary3)
+      end
+  end
+
   # GET /refuels/1
   # GET /refuels/1.json
   def show
