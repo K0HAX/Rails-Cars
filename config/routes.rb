@@ -4,7 +4,7 @@ CarApp::Application.routes.draw do
 
   resources :cars do
      resources :maintenances
-     get '/refuels/graphs' => 'refuels#graphs'
+     get '/refuels/graphs' => 'refuels#graphs', :as => 'graphs'
      resources :refuels
   end
 
