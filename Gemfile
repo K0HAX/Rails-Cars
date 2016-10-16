@@ -8,7 +8,7 @@ gem 'sqlite3'
 gem 'mysql2'
 
 gem 'therubyracer'
-gem 'less-rails'
+#gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'highline'
@@ -16,13 +16,13 @@ gem 'googlecharts'
 gem 'cancan'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -58,6 +58,6 @@ gem 'chartkick'
 gem 'groupdate'
 gem 'active_median'
 
-gem 'therubyracer'
+#gem 'therubyracer'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
