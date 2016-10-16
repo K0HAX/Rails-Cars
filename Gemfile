@@ -8,7 +8,7 @@ gem 'sqlite3'
 gem 'mysql2', '~> 0.3.18'
 
 gem 'therubyracer'
-#gem 'less-rails'
+gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'highline'
