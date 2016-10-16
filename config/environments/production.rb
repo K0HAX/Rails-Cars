@@ -14,6 +14,13 @@ CarApp::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  # Custom middleware
+  config.action_dispatch.trusted_proxies = %r{
+    ^127\.0\.0\.1$
+    ^::1$
+    ^10\.5\.0\.17$
+  }x
+
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
