@@ -1,0 +1,14 @@
+site "http://community.opscode.com/api/v1"
+
+cookbook 'yum', '~> 5.0.1'
+cookbook 'yum-epel'
+cookbook 'system'
+cookbook 'git'
+cookbook 'sqlite'
+cookbook 'mysql'
+cookbook 'postgresql'
+cookbook 'nodejs'
+cookbook 'ruby_build'
+cookbook 'ruby_rbenv', :git => "https://github.com/sous-chefs/ruby_rbenv"
+cookbook 'vim'
+

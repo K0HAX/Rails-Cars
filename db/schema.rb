@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140126081721) do
 
-  create_table "cars", force: true do |t|
+  create_table "cars", force: :cascade do |t|
     t.string   "Make"
     t.string   "Model"
     t.decimal  "Cost",         precision: 16, scale: 2
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140126081721) do
     t.integer  "user_id"
   end
 
-  create_table "maintenances", force: true do |t|
+  create_table "maintenances", force: :cascade do |t|
     t.string   "title"
     t.date     "date"
     t.text     "description"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20140126081721) do
     t.integer  "user_id"
   end
 
-  create_table "refuels", force: true do |t|
+  create_table "refuels", force: :cascade do |t|
     t.decimal  "miles",      precision: 16, scale: 2
     t.decimal  "gallons",    precision: 16, scale: 2
     t.decimal  "price",      precision: 16, scale: 2
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20140126081721) do
 
   add_index "refuels", ["car_id"], name: "index_refuels_on_car_id"
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"

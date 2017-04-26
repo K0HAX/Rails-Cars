@@ -35,7 +35,7 @@
   </tbody>
 </table>
 <div class="database-notes">
-Total lifetime maintenance cost: <%= @maintenances.sum(&:cost) %>
+Total lifetime maintenance cost: <%= @maintenances.sum(:cost) %>
 </div>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),

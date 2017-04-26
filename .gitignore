@@ -23,6 +23,7 @@
 capybara-*.html
 .rspec
 /log
+log/*
 /tmp
 /db/*.sqlite3
 /public/system
@@ -44,3 +45,7 @@ config/database.yml
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+# Vagrant Ignores
+.vagrant/*
+cookbooks/*
