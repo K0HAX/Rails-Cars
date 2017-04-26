@@ -14,6 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /log/development.log
+/log/test.log
 /tmp
 
 #### Additional Ignores ####
@@ -23,7 +24,6 @@
 capybara-*.html
 .rspec
 /log
-log/*
 /tmp
 /db/*.sqlite3
 /public/system
