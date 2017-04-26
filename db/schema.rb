@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140126081721) do
+ActiveRecord::Schema.define(version: 20170426194806) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "Make"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140126081721) do
     t.integer  "year"
     t.boolean  "in_inventory"
     t.integer  "user_id"
+    t.string   "vin"
   end
 
   create_table "maintenances", force: :cascade do |t|
