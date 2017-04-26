@@ -115,6 +115,6 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.provision "shell",
-        inline: "sudo -u vagrant /home/vagrant/.rbenv/shims/gem install bundler"
+        inline: "sudo -u vagrant /home/vagrant/.rbenv/shims/gem install bundler && systemctl disable firewalld && systemctl stop firewalld"
 end
 
