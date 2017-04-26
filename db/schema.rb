@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170426194806) do
+ActiveRecord::Schema.define(version: 20170426195559) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "Make"
     t.string   "Model"
-    t.decimal  "Cost",         precision: 16, scale: 2
+    t.decimal  "Cost",          precision: 16, scale: 2
     t.text     "Description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170426194806) do
     t.boolean  "in_inventory"
     t.integer  "user_id"
     t.string   "vin"
+    t.string   "License_Plate"
   end
 
   create_table "maintenances", force: :cascade do |t|
