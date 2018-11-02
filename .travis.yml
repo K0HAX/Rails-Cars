@@ -8,7 +8,7 @@ before_install:
 install: gem install rails
 script:
     - bundle install
-    - bundle exec rails db:migrate RAILS_ENV=test
+    - bundle exec rake db:migrate RAILS_ENV=test
     - bundle exec rspec
 services:
     - redis-server
