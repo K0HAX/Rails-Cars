@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
 
     # Every Vagrant development environment requires a box. You can search for
     # boxes at https://atlas.hashicorp.com/search.
-    config.vm.box = "K0HAX/centos-7.6-64"
+    config.vm.box = "bento/centos-7.5"
 
     # Disable automatic box update checking. If you disable this, then
     # boxes will only be checked for updates when the user runs
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
     # accessing "localhost:8080" will access port 80 on the guest machine.
-    config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
+    config.vm.network "forwarded_port", guest: 3000, host_ip: "127.0.0.1", host: 3002
 
     config.ssh.forward_agent = true
 
@@ -102,8 +102,8 @@ Vagrant.configure("2") do |config|
             rbenv: {
                 user_installs: [{
                     user: 'vagrant',
-                    rubies: ["2.3.4"],
-                    global: "2.3.4"
+                    rubies: ["2.3.7"],
+                    global: "2.3.7"
                 }]
             },
             system: {
