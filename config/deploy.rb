@@ -6,9 +6,11 @@ set :repo_url, 'https://github.com/K0HAX/Rails-Cars.git'
 
 # set :deploy_to, '/var/www/my_app'
 set :deploy_to, "/opt/deploy/CarApp"
-set :scm, :git
+#set :scm, :git
 set :deploy_via, :remote_cache
 
+set :rvm_type, :user
+set :rvm_ruby_version, '2.3.8@rails42111'
 set :user, "deploy"
 
 # set :format, :pretty
