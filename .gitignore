@@ -17,6 +17,12 @@
 /log/test.log
 /tmp
 
+# Ignore generated assets
+/public/assets/*
+
+# Ignore rbenv config
+.ruby-version
+
 #### Additional Ignores ####
 *.rbc
 *.sassc

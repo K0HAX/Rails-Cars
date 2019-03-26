@@ -41,11 +41,16 @@
   </tbody>
 </table>
 
+<%= link_to t('.cars', :default => t("helpers.links.cars")),
+        cars_path,
+        :class => 'btn' %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+        @car,
+        :class => 'btn' %>
 <%= link_to t('.graphs', :default => t("helpers.links.graphs")),
 	car_graphs_path,
-	:class => 'btn btn-primary' %>
+	:class => 'btn' %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_car_refuel_path,
-            :class => 'btn btn-primary' %>
-<%= link_to t('.cars', :default => t("helpers.links.cars")),
-              cars_path, :class => 'btn'  %>
+        new_car_refuel_path,
+        :class => 'btn btn-primary' %>
+
