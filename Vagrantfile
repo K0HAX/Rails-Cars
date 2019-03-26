@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
 
     # Every Vagrant development environment requires a box. You can search for
     # boxes at https://atlas.hashicorp.com/search.
-    config.vm.box = "K0HAX/centos-7.5-64"
+    config.vm.box = "bento/centos-7.6"
 
     # Disable automatic box update checking. If you disable this, then
     # boxes will only be checked for updates when the user runs
@@ -99,22 +99,22 @@ Vagrant.configure("2") do |config|
         chef.add_recipe "vim"
 
         chef.json = {
+            system: {
+                packages: {
+                    install: ["redis", "nodejs", "libpqxx-devel", "rubygems", "mariadb-devel", "sqlite-devel", "sqlite", "vim-enhanced"]
+                }
+            },
             rbenv: {
                 user_installs: [{
                     user: 'vagrant',
-                    rubies: ["2.3.4"],
-                    global: "2.3.4"
+                    rubies: ["2.3.8"],
+                    global: "2.3.8"
                 }]
-            },
-            system: {
-                packages: {
-                    install: ["redis", "nodejs", "libpqxx-devel", "rubygems", "mariadb-devel", "sqlite-devel", "sqlite"]
-                }
             }
         }
     end
 
     config.vm.provision "shell",
-        inline: "sudo -u vagrant /home/vagrant/.rbenv/shims/gem install bundler && systemctl disable firewalld && systemctl stop firewalld"
+      inline: "sudo -u vagrant /home/vagrant/.rbenv/bin/rbenv install 2.3.8 && /home/vagrant/.rbenv/shims/gem install bundler -v 1.17.3 && systemctl disable firewalld && systemctl stop firewalld"
 end
 
