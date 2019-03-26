@@ -49,7 +49,7 @@ end
 
 # Use Capistrano for deployment
 gem 'capistrano', group: :development
-gem 'rvm-capistrano'
+gem 'rvm1-capistrano3', require: false
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
 
