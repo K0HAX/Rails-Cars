@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+    - 2.3.8
+before_install:
+    - gem update --system
+    - gem --version
+install: gem install bundler -v 1.17.3
+script:
+    - bundle install
+    - bundle exec rake db:migrate RAILS_ENV=test
+services:
+    - redis-server
+

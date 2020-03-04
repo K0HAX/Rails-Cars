@@ -6,10 +6,16 @@ set :repo_url, 'https://github.com/K0HAX/Rails-Cars.git'
 
 # set :deploy_to, '/var/www/my_app'
 set :deploy_to, "/opt/deploy/CarApp"
-set :scm, :git
+#set :scm, :git
 set :deploy_via, :remote_cache
 
 set :user, "deploy"
+
+set :rvm1_ruby_version, '2.3.8@rails42111'
+
+before 'deploy', 'rvm1:install:rvm'  # install/update RVM
+before 'deploy', 'rvm1:install:ruby' # install Ruby and create gemset
+before 'deploy', 'rvm1:install:gems'
 
 # set :format, :pretty
 # set :log_level, :debug
@@ -22,7 +28,6 @@ set :user, "deploy"
 # set :keep_releases, 5
 
 namespace :deploy do
-
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
@@ -51,7 +56,7 @@ namespace :deploy do
     end
   end
 
-  #after 'deploy:update_code', 'deploy:migrate'
+  after 'deploy:updated', 'deploy:migrate'
   before 'deploy:assets:precompile', 'deploy:symlink_db' # callback: run this task before deploy:assets:precompile
   before 'deploy:assets:precompile', 'deploy:symlink_secret_token' # # callback: run this task before deploy:assets:precompile
 

@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.11.1'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.3'
 gem 'mysql2', '~> 0.3.18'
 
 gem 'therubyracer'
@@ -49,7 +49,7 @@ end
 
 # Use Capistrano for deployment
 gem 'capistrano', group: :development
-gem 'rvm-capistrano'
+gem 'rvm1-capistrano3', require: false
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
 
