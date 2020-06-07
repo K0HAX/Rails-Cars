@@ -1,0 +1,49 @@
+---
+
+- hosts: all
+  become: yes
+  vars:
+    ruby_version: "2.7.1"
+    rvm_path: "/usr/local/rvm/gems/ruby-{{ ruby_version }}/bin:/usr/local/rvm/gems/ruby-{{ ruby_version }}@global/bin:/usr/local/rvm/rubies/ruby-{{ ruby_version }}/bin:/usr/local/rvm/bin"
+
+  tasks:
+
+  - name: append rvm path to environment
+    lineinfile: dest=/etc/environment state=present backrefs=yes regexp='PATH=(["]*)((?!.*?{{rvm_path}}).*?)(["]*)$' line="PATH=\1\2:{{rvm_path}}\3"
+
+
+  - name: ensure necessary packages are installed
+    yum:
+      name: ['curl', 'gnupg2']
+      state: present
+
+  - name: ensure that GPG key for RVM is installed
+    command: gpg2 --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+    args:
+      creates: /root/.gnupg/secring.gpg
+
+  - name: download RVM installer script
+    get_url:
+      url: https://get.rvm.io
+      dest: /opt/rvm-install.sh
+      mode: '0744'
+
+  - name: ensure that RVM is installed
+    shell: /opt/rvm-install.sh stable
+    args:
+      creates: /usr/local/rvm
+
+  - name: ensure that ruby is installed
+    command: "rvm install {{ ruby_version }}"
+    args:
+      creates: "/usr/local/rvm/gems/ruby-{{ ruby_version }}"
+    environment:
+      PATH: "{{ rvm_path }}:{{ ansible_env.PATH }}"
+
+  - name: set default version of ruby with rvm
+    command: "rvm alias create default ruby-{{ ruby_version }}"
+    args:
+      creates: /usr/local/rvm/config/alias
+    environment:
+      PATH: "{{ rvm_path }}:{{ ansible_env.PATH }}"
+

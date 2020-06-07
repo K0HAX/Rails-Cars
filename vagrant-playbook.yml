@@ -1,0 +1,16 @@
+---
+
+- hosts: all
+  become: yes
+
+  tasks:
+  - name: ensure the EPEL is installed
+    yum:
+      name: ['epel-release']
+      state: present
+
+  - name: ensure necessary packages are installed
+    yum:
+      name: ['redis', 'vim-enhanced', 'libpqxx-devel', 'mariadb-devel', 'sqlite-devel', 'nodejs']
+      state: present
+
