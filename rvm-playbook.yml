@@ -3,7 +3,7 @@
 - hosts: all
   become: yes
   vars:
-    ruby_version: "2.7.1"
+    ruby_version: "2.3.8"
     rvm_path: "/usr/local/rvm/gems/ruby-{{ ruby_version }}/bin:/usr/local/rvm/gems/ruby-{{ ruby_version }}@global/bin:/usr/local/rvm/rubies/ruby-{{ ruby_version }}/bin:/usr/local/rvm/bin"
 
   tasks:
