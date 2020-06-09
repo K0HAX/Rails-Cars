@@ -1,7 +1,7 @@
 class CarsController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_car, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+  load_and_authorize_resource :car
 
   # GET /cars
   # GET /cars.json
@@ -25,7 +25,7 @@ class CarsController < ApplicationController
 
   # GET /cars/new
   def new
-    @car = Car.new
+    @car = current_user.cars.build
   end
 
   # GET /cars/1/edit
@@ -35,17 +35,14 @@ class CarsController < ApplicationController
   # POST /cars
   # POST /cars.json
   def create
-    @car = Car.new(car_params)
-    # @car = Users::Car.new(params[:car_params])
     @car.user_id = current_user.id
-    #current_user.cars << @car
 
     respond_to do |format|
       if @car.save
         format.html { redirect_to @car, notice: 'Car was successfully created.' }
         format.json { render action: 'show', status: :created, location: @car }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'new', notice: 'Failure' }
         format.json { render json: @car.errors, status: :unprocessable_entity }
       end
     end

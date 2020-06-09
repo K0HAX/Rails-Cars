@@ -47,3 +47,9 @@
     environment:
       PATH: "{{ rvm_path }}:{{ ansible_env.PATH }}"
 
+  - name: add vagrant user to rvm group
+    user:
+      name: vagrant
+      groups: rvm
+      append: yes
+
