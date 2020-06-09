@@ -11,7 +11,7 @@ set :deploy_via, :remote_cache
 
 set :user, "deploy"
 
-set :rvm1_ruby_version, '2.3.8@rails42111'
+set :rvm1_ruby_version, '2.5.8@rails42113'
 
 before 'deploy', 'rvm1:install:rvm'  # install/update RVM
 before 'deploy', 'rvm1:install:ruby' # install Ruby and create gemset
