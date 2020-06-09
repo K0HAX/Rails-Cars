@@ -56,3 +56,7 @@ config/database.yml
 # Vagrant Ignores
 .vagrant/*
 cookbooks/*
+
+# Ignore node_modules directory
+node-modules/*
+
