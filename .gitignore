@@ -21,7 +21,7 @@
 /public/assets/*
 
 # Ignore rbenv config
-.ruby-version
+#.ruby-version
 
 #### Additional Ignores ####
 *.rbc
