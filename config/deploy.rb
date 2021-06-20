@@ -7,11 +7,11 @@ set :repo_url, 'https://github.com/K0HAX/Rails-Cars.git'
 # set :deploy_to, '/var/www/my_app'
 set :deploy_to, "/opt/deploy/CarApp"
 #set :scm, :git
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 
-set :user, "deploy"
+#set :user, "deploy"
 
-set :rvm1_ruby_version, '2.3.8@rails42111'
+set :rvm1_ruby_version, '2.5.8@rails42113'
 
 before 'deploy', 'rvm1:install:rvm'  # install/update RVM
 before 'deploy', 'rvm1:install:ruby' # install Ruby and create gemset
@@ -19,7 +19,7 @@ before 'deploy', 'rvm1:install:gems'
 
 # set :format, :pretty
 # set :log_level, :debug
-# set :pty, true
+set :pty, true
 
 # set :linked_files, %w{config/database.yml}
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}

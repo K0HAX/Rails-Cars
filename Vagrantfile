@@ -31,6 +31,10 @@ Vagrant.configure("2") do |config|
         vm.memory = "1024"
     end
 
+    config.vm.provision "shell", inline: <<-SHELL
+      yum install -y nfs-utils
+    SHELL
+
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "rvm-playbook.yml"
     end
