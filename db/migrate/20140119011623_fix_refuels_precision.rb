@@ -1,4 +1,4 @@
-class FixRefuelsPrecision < ActiveRecord::Migration
+class FixRefuelsPrecision < ActiveRecord::Migration[4.2]
   def change
     change_column :refuels, :miles, :decimal, :precision => 16, :scale => 2
     change_column :refuels, :price, :decimal, :precision => 16, :scale => 2

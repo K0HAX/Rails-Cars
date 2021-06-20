@@ -1,4 +1,4 @@
-class CreateRefuels < ActiveRecord::Migration
+class CreateRefuels < ActiveRecord::Migration[4.2]
   def change
     create_table :refuels do |t|
       t.decimal :miles
