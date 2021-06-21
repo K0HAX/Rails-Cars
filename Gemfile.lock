@@ -224,7 +224,6 @@ PLATFORMS
 DEPENDENCIES
   active_median
   bullet
-  bundler (~> 2.2.20)
   cancancan
   capistrano
   capistrano-bundler
@@ -251,4 +250,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   2.2.20
+   1.17.3
