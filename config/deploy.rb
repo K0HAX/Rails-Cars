@@ -11,7 +11,7 @@ set :deploy_to, "/opt/deploy/CarApp"
 
 #set :user, "deploy"
 
-set :rvm1_ruby_version, '2.5.9@rails5246'
+set :rvm1_ruby_version, '2.5.9@cars'
 
 #before 'deploy', 'rvm1:install:rvm'  # install/update RVM
 before 'deploy', 'rvm1:install:ruby' # install Ruby and create gemset

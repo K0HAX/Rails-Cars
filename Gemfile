@@ -60,6 +60,7 @@ gem 'groupdate'
 gem 'active_median'
 
 # Fix rake
+gem 'rake', '~> 13.0.3'
 gem 'listen', group: :development
 
 #gem 'therubyracer'
