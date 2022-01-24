@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.provision "shell", inline: <<-SHELL
-      yum install -y nfs-utils
+      yum install -y nfs-utils ca-certificates
     SHELL
 
     config.vm.provision "ansible" do |ansible|
@@ -44,6 +44,9 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.provision "shell", inline: <<-SHELL
+      curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo
+      rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
+      yum install -y yarn
       systemctl disable firewalld && systemctl stop firewalld
     SHELL
 end
