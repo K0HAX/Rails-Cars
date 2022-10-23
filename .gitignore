@@ -11,6 +11,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+/db-data/*.sqlite3
+/db-data/*.sqlite3-journal
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /log/development.log
@@ -41,6 +44,8 @@ pickle-email-*.html
 config/initializers/secret_token.rb
 config/secrets.yml
 config/database.yml
+# Ignore master key for decrypting credentials and more.
+/config/master.key
 /bin/*
 
 ## Environment normalisation:
