@@ -6,7 +6,6 @@ install:
   - gem install bundler:2.3.8
 script:
   - bundle install
-  - bundle exec rake db:migrate RAILS_ENV=test
 services:
   - redis-server
 
