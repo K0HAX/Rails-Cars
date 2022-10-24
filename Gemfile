@@ -63,6 +63,9 @@ gem 'active_median'
 gem 'rake'
 gem 'listen', group: :development
 
+# Fix bootsnap
+gem 'bootsnap'
+
 #gem 'therubyracer'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
