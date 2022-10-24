@@ -65,3 +65,5 @@ cookbooks/*
 # Ignore node_modules directory
 node-modules/*
 
+python/*
+

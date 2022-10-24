@@ -2,6 +2,11 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+<div>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+        new_car_refuel_path,
+        :class => 'btn btn-primary' %>
+</div>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -17,9 +22,10 @@
     </tr>
   </thead>
   <tbody>
+    <%- refuel_num = 1 -%>
     <% @refuels.each do |refuel| %>
       <tr>
-        <td><%= link_to refuel.id, [refuel.car, refuel] %></td>
+        <td><%= link_to refuel_num, [refuel.car, refuel] %></td>
         <td><%= refuel.miles %></td>
         <td><%= refuel.gallons %></td>
         <td><%= refuel.price %></td>
@@ -37,6 +43,7 @@
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
+      <%- refuel_num = refuel_num + 1 -%>
     <% end %>
   </tbody>
 </table>

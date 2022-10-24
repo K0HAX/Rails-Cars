@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.6.2'
+gem 'rails', '5.2.8.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -62,6 +62,9 @@ gem 'active_median'
 # Fix rake
 gem 'rake'
 gem 'listen', group: :development
+
+# Fix bootsnap
+gem 'bootsnap'
 
 #gem 'therubyracer'
 # Use debugger

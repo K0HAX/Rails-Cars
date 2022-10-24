@@ -20,7 +20,7 @@ class RefuelsController < ApplicationController
           @tmpMilage = (refuel.miles / refuel.gallons).round(2)
           @tmpFuelCost = (refuel.price / refuel.gallons).round(2)
           @tmpMileageCost = (refuel.price / refuel.miles).round(2)
-          @tmpId = (refuel.id)
+          @tmpId = (refuel.created_at)
           ary = [@tmpId, @tmpMilage]
           ary2 = [@tmpId, @tmpFuelCost]
           ary3 = [@tmpId, @tmpMileageCost]
