@@ -18,9 +18,10 @@
     </tr>
   </thead>
   <tbody>
+    <%- car_num = 1 -%>
     <% @cars.each do |car| %>
       <tr>
-        <td><%= link_to car.id, car_path(car) %></td>
+        <td><%= link_to car_num, car_path(car) %></td>
         <td><%= car.Make %></td>
         <td><%= car.Model %></td>
         <td><%= car.Cost %></td>
@@ -39,6 +40,7 @@
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
+      <%- car_num = car_num + 1 -%>
     <% end %>
   </tbody>
 </table>

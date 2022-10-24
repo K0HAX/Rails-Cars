@@ -4,11 +4,11 @@
 </div>
 <div class="page-body">
     <h3>Miles traveled per Tank</h3>
-    <%= line_chart @refuels.pluck(:id, :miles), discrete: true %>
+    <%= line_chart @refuels.pluck(:created_at, :miles), discrete: true %>
     <h3>Gallons per Tank</h3>
-    <%= line_chart @refuels.pluck(:id, :gallons), discrete: true %>
+    <%= line_chart @refuels.pluck(:created_at, :gallons), discrete: true %>
     <h3>Price per Tank</h3>
-    <%= line_chart @refuels.pluck(:id, :price), discrete: true %>
+    <%= line_chart @refuels.pluck(:created_at, :price), discrete: true %>
     <h3>Miles per Gallon</h3>
     <%= line_chart @mileageArray, discrete: true %>
     <h3>Price per Gallon</h3>
