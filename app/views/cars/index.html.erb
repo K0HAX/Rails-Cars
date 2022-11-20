@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:Make) %></th>
       <th><%= model_class.human_attribute_name(:Model) %></th>
@@ -14,14 +15,16 @@
       <th><%= model_class.human_attribute_name(:License_Plate) %></th>
       <th><%= model_class.human_attribute_name(:year) %></th>
       <th><%= model_class.human_attribute_name(:in_inventory) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <%- car_num = 1 -%>
     <% @cars.each do |car| %>
       <tr>
-        <td><%= link_to car_num, car_path(car) %></td>
+        <td>
+          <%= content_tag :a, "Show", href: "#modal" + car_num.to_s, class: 'btn', data: {toggle: 'modal'} %>
+        </td>
+        <td><%= car_num %></td>
         <td><%= car.Make %></td>
         <td><%= car.Model %></td>
         <td><%= car.Cost %></td>
@@ -30,16 +33,11 @@
         <td><%= car.License_Plate %></td>
         <td><%= car.year %></td>
         <td><%= car.in_inventory %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_car_path(car), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      car_path(car),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
       </tr>
+      <%= modal_dialog id: "modal" + car_num.to_s,
+        header: { show_close: true, dismiss: 'modal', title: car.year.to_s + " " + car.Make + " " + car.Model },
+        body:   { content: render(:partial => "cars/show", locals: { car: car, model_class: model_class }) },
+        footer: { content: render(:partial => "cars/show_footer", locals: { car: car }) } %>
       <%- car_num = car_num + 1 -%>
     <% end %>
   </tbody>
