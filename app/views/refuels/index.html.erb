@@ -10,6 +10,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:miles) %></th>
       <th><%= model_class.human_attribute_name(:gallons) %></th>
@@ -25,7 +26,10 @@
     <%- refuel_num = 1 -%>
     <% @refuels.each do |refuel| %>
       <tr>
-        <td><%= link_to refuel_num, [refuel.car, refuel] %></td>
+        <td>
+          <%= content_tag :a, "Show", href: "#modal" + refuel_num.to_s, class: 'btn', data: {toggle: 'modal'} %>
+        </td>
+        <td><%= refuel_num %></td>
         <td><%= refuel.miles %></td>
         <td><%= refuel.gallons %></td>
         <td><%= refuel.price %></td>
@@ -43,6 +47,10 @@
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
+      <%= modal_dialog id: "modal" + refuel_num.to_s,
+        header: { show_close: true, dismiss: 'modal', title: refuel.created_at },
+        body:   { content: render(:partial => "refuels/show", locals: { refuel: refuel, model_class: model_class }) },
+        footer: { content: render(:partial => "refuels/show_footer", locals: { refuel: refuel }) } %>
       <%- refuel_num = refuel_num + 1 -%>
     <% end %>
   </tbody>

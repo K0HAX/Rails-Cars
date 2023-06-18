@@ -1,0 +1,24 @@
+<p>
+ <strong><%= model_class.human_attribute_name(:miles) %>:</strong>
+ <%= refuel.miles %>
+</p>
+<p>
+ <strong><%= model_class.human_attribute_name(:gallons) %>:</strong>
+ <%= refuel.gallons %>
+</p>
+<p>
+ <strong><%= model_class.human_attribute_name(:price) %>:</strong>
+ <%= refuel.price %>
+</p>
+<p>
+ <strong>Miles per Gallon:</strong>
+ <%= (refuel.miles / refuel.gallons).round(2) %>
+</p>
+<p>
+ <strong>Dollars per Gallon</strong>
+ <%= (refuel.price / refuel.gallons).round(2) %>
+</p>
+<p>
+ <strong>Dollars per Mile</strong>
+ <%= (refuel.price / refuel.miles).round(2) %>
+</p>
