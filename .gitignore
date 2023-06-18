@@ -67,3 +67,5 @@ node-modules/*
 
 python/*
 
+# Ignore secrets
+master.key
