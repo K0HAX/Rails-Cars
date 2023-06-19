@@ -28,17 +28,17 @@ USER ruby
 WORKDIR /app
 
 ARG BUILD_VER=unknown
-COPY . /app
+#COPY . /app
 
-USER root
-RUN chown -R ruby:ruby /app
-USER ruby
+#USER root
+#RUN chown -R ruby:ruby /app
+#USER ruby
 
-RUN rm -rf node_modules vendor
+#RUN rm -rf node_modules vendor
 
 RUN gem install bundler -v '>= 1.3.0'
-RUN bundle install --jobs "$(nproc)"
-RUN yarn install
+#RUN bundle install --jobs "$(nproc)"
+#RUN yarn install
 
 ENV RAILS_ENV="${RAILS_ENV}" \
     NODE_ENV="${NODE_ENV}" \
@@ -47,24 +47,25 @@ ENV RAILS_ENV="${RAILS_ENV}" \
 
 #COPY database.yml /app/config/database.yml
 #COPY devise.rb /app/config/initializers/devise.rb
-COPY master.key /app/config/master.key
-USER root
-RUN chown -R ruby:ruby /app/config/master.key
-USER ruby
+#RUN mkdir /app/config
+#COPY master.key /app/config/master.key
+#USER root
+#RUN chown -R ruby:ruby /app/config/master.key
+#USER ruby
 
 ENV RAILS_SERVE_STATIC_FILES=1
 
-RUN bundle exec rake app:update:bin
+#RUN bundle exec rake app:update:bin
 
-RUN if [ "${RAILS_ENV}" != "development" ]; then \
-  rails assets:precompile; fi
+#RUN if [ "${RAILS_ENV}" != "development" ]; then \
+#  rails assets:precompile; fi
 
-USER root
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-USER ruby
+#USER root
+#COPY entrypoint.sh /usr/bin/
+#RUN chmod +x /usr/bin/entrypoint.sh
+#USER ruby
 
-ENTRYPOINT ["entrypoint.sh"]
+#ENTRYPOINT ["entrypoint.sh"]
 
-CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3001"]
+#CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3001"]
 
