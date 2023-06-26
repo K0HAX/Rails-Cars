@@ -3,6 +3,7 @@
     "@rails/webpacker": "5.4.4",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
+    "plugin-proposal-private-methods": "^7.18"
   },
   "devDependencies": {
     "webpack-dev-server": "^3"
