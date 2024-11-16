@@ -39,7 +39,7 @@ Rails.application.configure do
 
   # Allow X-Forwarded-For from Docker
   config.action_dispatch.trusted_proxies = [
-    "172.16.0.0/12", ActionDispatch::RemoteIp::TRUSTED_PROXIES
+    "172.16.0.0/12"
   ].map { |proxy| IPAddr.new(proxy) }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
