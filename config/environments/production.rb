@@ -37,6 +37,11 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
+  # Allow X-Forwarded-For from Docker
+  config.action_dispatch.trusted_proxies = [
+    "172.16.0.0/12", ActionDispatch::RemoteIp::TRUSTED_PROXIES
+  ].map { |proxy| IPAddr.new(proxy) }
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
